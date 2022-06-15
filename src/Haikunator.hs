@@ -79,7 +79,7 @@ formatSlug' separator haiku = T.concat
       [ separator
       , T.pack $ 
         printf 
-          ("%" ++ show (_numberOfDigits haiku) ++ "d") 
+          ("%0" ++ show (_numberOfDigits haiku) ++ "d") 
           (number haiku)
       ]
   )
