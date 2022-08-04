@@ -50,7 +50,7 @@ haikunate :: RandomGen g => HaikuGeneratorConfig -> g -> (HaikuSlug, g)
 haikunate conf g =
   let (adjIx, g') = uniformR (0, length (adjectives conf) - 1) g
       (nounIx, g'') = uniformR (0, length (nouns conf) - 1) g'
-      (number, g''') = uniformR (0, 10 ^ (numberOfDigits conf) - 1) g''
+      (number, g''') = uniformR (0, 10 ^ numberOfDigits conf - 1) g''
   in 
     ( HaikuSlug 
         (adjectives conf V.! adjIx) 
