@@ -96,4 +96,4 @@ defaultHaikuGeneratorConfig = unsafePerformIO $ do
 {-# NOINLINE defaultHaikuGeneratorConfig #-}
 
 variantCount :: HaikuGeneratorConfig -> Int
-variantCount conf = length (adjectives conf) * length (nouns conf) * 10 ^ (numberOfDigits conf)
+variantCount conf = length (adjectives conf) * length (nouns conf) * 10 ^ numberOfDigits conf
